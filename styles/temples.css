@@ -1,6 +1,6 @@
 :root {
-    --primary-color: rgb(29, 90, 107);
-    --accent-color: #97d5f0;
+    --primary-color: rgb(169, 216, 229);
+    --accent-color: #dcedf4;
 }
 
 * {
@@ -17,7 +17,6 @@ body {
 
 header {
     background-color: var(--primary-color);
-    color: var(--accent-color);
     padding: 1.5rem;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;  
@@ -31,7 +30,7 @@ nav {
 nav a {
     display: none;
     text-decoration: none;
-    color: var(--accent-color);
+    color: inherit;
     padding: 1rem;
 }
 
@@ -94,13 +93,8 @@ figure img {
 footer {
     text-align: center;
     background-color: var(--primary-color);
-    color: var(--accent-color);
     padding: 1.5rem;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     
-}
-
-#lastModified {
-    color: yellowgreen;
 }
