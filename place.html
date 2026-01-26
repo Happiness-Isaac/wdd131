@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WDD 131 - Dynamic Web Fundamentals - Happiness Isaac Country Page</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu&display=swap" rel="stylesheet">
+
+        <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Happiness Isaac country page assignment applying the concept of design and development of a web page">
+        <meta name="author" content="Happiness Isaac">
+
+        <link rel="stylesheet" href="styles/place.css">
+
+        <script src="scripts/place.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <img src="images/chinaflag.webp" alt="">
+            <h1>China</h1>
+        </header>
+
+        <main>
+            <div class="hero">
+                <picture>
+                    <source media="(min-width: 1500px )" srcset="images/wolongpandalarge.webp">
+                    <source media="(min-width: 1000px)" srcset="images/wolongpandamedium.webp">
+                    <img src="images/wolongpandasmall.webp" alt=" China Wolong Panda" width="500" height="700">
+                </picture>
+
+                <section class="card data">
+                    <h2>Data</h2>
+                    <ul class="stats">
+                        <li><span>Area:</span> 9,596,961 km²</li>
+                        <li><span>Population:</span> 1.45 billion</li>
+                        <li><span>Capital:</span> Beijing</li>
+                        <li><span>Languages:</span> Mandarin</li>
+                        <li><span>Currency:</span> Renminbi</li>
+                        <li><span>Time Zone:</span> UTC+8</li>
+                        <li><span>Calling Code:</span> +86</li>
+                        <li><span>Internet TLD:</span> .cn</li>
+                    </ul>
+                </section>
+
+                <section class="card weather">
+                    <h2 id="weather-heading">Weather</h2>
+                    <img src="images/weathericon.svg" class="weather-icon-mobile" alt="weather icon">
+                    <ul class="stats">
+                        <li><span>Temperature:</span> <span id="temperature">18</span>°C</li>
+                        <li><span>Conditions:</span> Cloudy</li>
+                        <li><span>Wind Speed:</span> <span id="windSpeed">18</span> km/h</li>
+                        <li><span>Wind Chill:</span> <span id="windChill"></span></li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy;<span id="currentYear"></span> | Happiness Isaac | Nigeria</p><br>
+            <p id="lastModified"></p>
+        </footer>
+    </body>
+</html>
