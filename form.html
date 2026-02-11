@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Web Forms">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Practicing web form with a confirmation page that follows best practices and use valid HTML and CSS">
     <meta name="author" content="Happiness Isaac">
     <title>Product Review Form </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,9 @@
             <select id="pname" name="product-name" required>
                 <option disabled selected value="">Select a Product..</option>
             </select>
+
             <div class="rating">Overall Rating *</div>
+
             <div class="star-rating">
                 <input type="radio" name="stars" id="star-a" value="5" required/>
                 <label for="star-a"></label>
@@ -40,16 +42,29 @@
                 <input type="radio" name="stars" id="star-e" value="1" required/>
                 <label for="star-e"></label>
             </div>
+
             <label class="date" for="date">Date of Installation *</label>
+
             <input type="date" id="date" name="date" required>
-            <div class="use_product">Which features did you find useful in the product? *<br><span>(Check all that
-                    apply)</span></div>
+
+            <div class="use_product">Which features did you find useful in the product? *<br><span>(Check all that apply)</span> </div>
+
             <div class="checkboxes">
-                <label><input type="checkbox" name="durability" id="durab" value="Durability"> Durability</label>
-                <label><input type="checkbox" name="ease-of-use" id="ease" value="Ease of Use"> Ease of Use</label>
-                <label><input type="checkbox" name="performance" id="performance" value="Performance"> Performance</label>
-                <label><input type="checkbox" name="design" id="design" value="Design"> Design</label>
+            
+                <input type="checkbox" id="durab" name="durability" value="Durability">
+                <label for="durab">Durability</label>
+            
+                <input type="checkbox" id="ease" name="ease-of-use" value="Ease of Use">
+                <label for="ease">Ease of Use</label>
+            
+                <input type="checkbox" id="performance" name="performance" value="Performance">
+                <label for="performance">Performance</label>
+            
+                <input type="checkbox" id="design" name="design" value="Design">
+                <label for="design">Design</label>
             </div>
+
+
             <div class="optional">
                 <label class="review" for="review">Written Review <span class="optional">(Optional)</span></label>
                 <textarea id="review" name="review"></textarea>
@@ -57,6 +72,7 @@
                 <input type="text" id="fname" name="full-name">
                 <input type="submit" value="Post Review">
             </div>
+
         </form>
     </main>
 
