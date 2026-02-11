@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Web Forms">
+    <meta name="author" content="Happiness Isaac">
+    <title>Product Review Form </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html">
+            <label class="name" for="pname">Product Name *</label>
+            <select id="pname" name="product-name" required>
+                <option disabled selected value="">Select a Product..</option>
+            </select>
+            <div class="rating">Overall Rating *</div>
+            <div class="star-rating">
+                <input type="radio" name="stars" id="star-a" value="5" required/>
+                <label for="star-a"></label>
+    
+                <input type="radio" name="stars" id="star-b" value="4" required/>
+                <label for="star-b"></label>
+    
+                <input type="radio" name="stars" id="star-c" value="3" required/>
+                <label for="star-c"></label>
+    
+                <input type="radio" name="stars" id="star-d" value="2" required/>
+                <label for="star-d"></label>
+    
+                <input type="radio" name="stars" id="star-e" value="1" required/>
+                <label for="star-e"></label>
+            </div>
+            <label class="date" for="date">Date of Installation *</label>
+            <input type="date" id="date" name="date" required>
+            <div class="use_product">Which features did you find useful in the product? *<br><span>(Check all that
+                    apply)</span></div>
+            <div class="checkboxes">
+                <label><input type="checkbox" name="durability" id="durab" value="Durability"> Durability</label>
+                <label><input type="checkbox" name="ease-of-use" id="ease" value="Ease of Use"> Ease of Use</label>
+                <label><input type="checkbox" name="performance" id="performance" value="Performance"> Performance</label>
+                <label><input type="checkbox" name="design" id="design" value="Design"> Design</label>
+            </div>
+            <div class="optional">
+                <label class="review" for="review">Written Review <span class="optional">(Optional)</span></label>
+                <textarea id="review" name="review"></textarea>
+                <label for="fname" class="name">Your Name <span class="optional">(Optional)</span></label>
+                <input type="text" id="fname" name="full-name">
+                <input type="submit" value="Post Review">
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p> &copy; <span id="currentyear"></span> &bull; Happiness Isaac &bull; Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
