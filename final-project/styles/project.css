@@ -1,0 +1,484 @@
+:root {
+    --heading-color: #052659;
+    --background-color: #dceefa;
+    --accent-color1: #5482b4;
+    --accent-color2: #011025;
+    --light-color: #00000062;
+    --header-font: "Lato", sans-serif;
+    --body-font: "Open Sans", sans-serif;
+    --text-color: #fff;
+    --border-color: #ccc;
+    --darkmode-color: #121212;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.dark-mode {
+    background-color: var(--darkmode-color);
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--background-color);
+}
+
+header h1 {
+    background-color: var(--heading-color);
+    font-family: var(--header-font);
+    text-align: center;
+    padding: 30px;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+nav {
+    background-color: var(--accent-color2);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+    color: var(--text-color);
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 15px;
+    transform-origin: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent-color1);
+    border-radius: 30px;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.welcome{
+    position: relative;
+}
+
+.welcome img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.welcome-msg {
+    position: relative;
+    bottom: 15rem;
+    text-align: center;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+.welcome-msg h2 {
+    padding-bottom: 10px;
+    font-family: var(--header-font);
+    font-size: 2rem;
+}
+
+.welcome-msg p {
+    padding-bottom: 20px;
+    font-style: italic;
+    font-family: cursive;
+}
+
+.welcome-msg button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-family: var(--body-font);
+    box-shadow: 5px 5px 15px;
+}
+
+.welcome-msg button:hover {
+    background-color: var(--accent-color2);
+    transition: 0.6s;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.student-success {
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.student-success h2 {
+    padding-bottom: 15px;
+    font-size: 2rem;
+    font-family: var(--header-font);
+}
+
+.student-success h2::before {
+    content: "🎓 ";
+}
+
+.student-success p {
+    font-size: 1.3rem;
+    padding-bottom: 20px;
+}
+ 
+body.dark-mode .student-success {
+    color: var(--text-color);
+}
+
+.tip-descriptions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.tip-card {
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 2px 4px 8px var(--accent-color1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.tip-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 2px 4px 8px var(--accent-color1);
+}
+
+.tip-card img {
+    width: 100%;
+    height: auto ;
+    object-fit: cover;
+}
+
+.tip-card h3 {
+    padding: 15px;
+    margin: 5px;
+    font-family: var(--header-font);
+}
+
+.tip-card p {
+    padding: 0 20px 15px;
+    margin: 0;
+}
+
+.feedback {
+    max-width: 600px;
+    margin: 3rem auto;
+}
+
+.feedback h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.feedback form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback label {
+    font-weight: 500;
+}
+
+.feedback input,
+.feedback textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+.feedback button {
+    margin-top: 15px;
+    border-radius: 30px;
+    background-color: var(--background-color);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+textarea[name="message"] {
+    resize: both;
+    max-width: 100%;
+    max-height: 200px;
+    box-sizing: border-box;
+}
+
+body.dark-mode .feedback {
+    color: var(--text-color);
+}
+
+body.dark-mode .feedback label{
+    color: var(--text-color);
+}
+
+footer {
+    background-color: var(--heading-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Study Tips */
+
+.study-tips h2,
+#featured-tips h2 {
+    font-family: var(--main-font);
+    padding: 10px 0;
+    font-size: 1.8rem;
+}
+
+.study-tips {
+    padding: 20px;
+    background-color: ;
+}
+
+.study-tips li {
+    padding: 6px 0;
+    font-family: var(--primary-font);
+    list-style-type: none;
+    font-size: 1.2rem;
+}
+
+.study-tips a {
+    font-size: 1rem;
+    color: ;
+}
+
+#featured-tips {
+    padding: 20px;
+}
+
+.tip-card h3 {
+    font-family: var(--primary-font);
+    color: ;
+}
+
+body.dark-mode .tip-card h3 {
+    color: ;
+}
+
+body.dark-mode .study-tips {
+    color: ;
+}
+
+body.dark-mode .study-tips a {
+    color: ;
+}
+
+.tip-card {
+    margin: 10px;
+}
+
+.tip-card p {
+    font-family: var(--secondary-font);
+}
+
+.study-group {
+    padding: 20px;
+    background-color: rgb(177, 174, 174);
+}
+
+.study-group h2 {
+    font-family: var(--main-font);
+    padding: 10px 0;
+    font-size: 1.8rem;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+body.dark-mode .study-group h2 {
+    color: ;
+}
+
+form {
+    font-family: var(--secondary-font);
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1.2rem;
+}
+
+#form-description {
+    text-align: center;
+}
+
+input {
+    padding: 20px;
+    width: 24rem;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+input[type="email"] {
+    margin-bottom: 20px;
+}
+
+form button {
+    width: 20rem;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 15px 300px;
+    border: none;
+    font-family: var(--main-font);
+    font-size: 1.2rem;
+}
+
+body.dark-mode form {
+    color: #000;
+}
+
+form button:hover {
+    background-color: var(--heading-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transform: scaleX(1);
+}
+
+#success-message {
+    color: ;
+    margin-top: 20px;
+    display: none;
+    font-family: var(--secondary-font);
+    padding: 10px;
+}
+
+/* resources.html page */
+
+#study-materials,
+#student-wellness {
+    padding: 20px;
+    border: 1px dotted ;
+    margin: 10px;
+}
+
+#study-materials h2,
+#campus-resources h2,
+#student-wellness h2,
+#financial-resources h2 {
+    font-family: var(--main-font);
+    padding: 10px 0;
+    font-size: 1.8rem;
+    color: ;
+}
+
+#study-materials p,
+#campus-resources p,
+#student-wellness p,
+#financial-resources p {
+    font-family: ;
+    font-size: 1.2rem;
+    padding: 0 0 10px;
+}
+
+#study-materials li,
+#campus-resources li,
+#student-wellness li,
+#financial-resources li {
+    list-style-position: inside;
+    font-family: var(--primary-font);
+    padding: 5px;
+}
+
+#study-materials a,
+#student-wellness a {
+    text-decoration: none;
+}
+
+#campus-resources,
+#financial-resources {
+    padding: 20px;
+    border: 1px dotted ;
+    margin: 10px;
+    background-color: ;
+    color: ;
+    border-radius: 5px;
+}
+
+#campus-resources h2,
+#financial-resources h2 {
+    color: ;
+}
+
+#campus-resources a,
+#financial-resources a {
+    text-decoration: none;
+    color: ;
+    font-size: 1.2rem;
+    transform-origin: center;
+}
+
+
+@media screen and (min-width: 700px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 5px;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
+    .welcome-msg {
+        bottom: 30rem;
+        padding: 60px;
+    }
+
+    .welcome-msg h2 {
+        font-size: 2rem;
+    }
+
+    .welcome-msg p {
+        font-size: 1.2rem;
+    }
+
+    .welcome-msg button {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .tip-descriptions {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .student-success {
+        padding: 2rem;
+    }
+    
+    .student-success h2 {
+        font-size: 1.6rem;
+    }
+
+   main,
+   header,
+   footer {
+       width: min(1300px, 90%);
+       margin: 0 auto;
+
+   }
+
+}

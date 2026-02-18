@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Life Resource Toolkit</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/byulogo.png">
+
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals -Website Planning Document. The assignment is to build a basic website plan in HTML and design with CSS.">
+    <meta name="author" content="Happiness Isaac">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Student Life Resource Toolkit</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="study-tips.html">Study Tips</a>
+            <a href="resources.html">Resources</a>
+        </nav>
+    </header>
+    <main>
+        <div class="study-tips">
+            <h2>Effective Study Strategies</h2>
+            <ul>
+                <li>💡 Create a dedicated study space</li>
+                <li>⏳ Use the Pomodoro technique (25 min study, 5 min break)</li>
+                <li>📖 Take handwritten notes to improve memory retention</li>
+                <li>🎧 Listen to study-friendly music</li>
+            </ul>
+        </div>
+        <section id="featured-tips">
+            <h2>🌟 Featured Study Tips</h2>
+        </section>
+        <section class="study-group">
+            <h2>Join Our Study Group</h2>
+            <form id="myForm" aria-describedby="form-description">
+                <p id="form-description">Please fill out the form below. All fields are required.</p>
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required aria-required="true">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required aria-required="true">
+
+                <button type="submit">Join Group</button>
+            </form>
+        </section>
+        <div id="success-message" role="status" aria-live="polite">
+            Thank you! Your form has been submitted.
+        </div>
+    </main>
+    <footer>
+        <p> &copy; 2026 Student Life Resource Toolkit</p>
+        <p>Happiness Isaac &bull; Dynamic Web Fundamentals &bull; Final Project</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Life Resource Toolkit</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/byulogo.png">
+
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals -Website Planning Document. The assignment is to build a basic website plan in HTML and design with CSS.">
+    <meta name="author" content="Happiness Isaac">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Student Life Resource Toolkit</h1>
+        <nav>
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="study-tips.html">Study Tips</a>
+            <a href="resources.html">Resources</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <picture>
+                <source media="(min-width: 1500px )" srcset="images/studentlarge.webp">
+                <source media="(min-width: 700px)" srcset="images/studentmedium.webp">
+                <img src="images/studentsmall.webp" alt="Student studying in library" width="500" height="800" loading="lazy">
+            </picture>
+
+            <div class="welcome-msg">
+                <h2>Your Student Toolkit!</h2>
+                <p>"Organizing is what you do before you do something, so that when you do it, it is not all mixed up." — A.A. Milne</p>
+                <button id="toggle-mode">Toggle Dark Mode</button>
+            </div>
+        </section>
+
+        <div class="student-success">
+            <h2>Foundation of Student Success</h2>
+            <p>
+                Academic success is supported by wellbeing, effective time management,
+                and consistent organization. These three habits help students stay productive
+                while maintaining balance.
+            </p>
+        </div>
+
+        <section class="tip-descriptions">
+        
+            <article class="tip-card">
+                <figure>
+                    <img src="images/time.webp" alt="Student managing time with a clock" loading="lazy">
+                    <figcaption>
+                        <h3>Time Management ⏱️</h3>
+                        <p>
+                            Good time management reduces stress and helps students stay focused,
+                            balanced, and productive throughout their academic journey.
+                        </p>
+                    </figcaption>
+                </figure>
+            </article>
+        
+            <article class="tip-card">
+                <figure>
+                    <img src="images/organization.webp" alt="Organization reminder note" loading="lazy">
+                    <figcaption>
+                        <h3>Stay Organized 🏷️</h3>
+                        <p>
+                            When students stay organized, they create more time for learning,
+                            rest, and personal wellbeing while maintaining consistent progress.
+                        </p>
+                    </figcaption>
+                </figure>
+            </article>
+        
+            <article class="tip-card">
+                <figure>
+                    <img src="images/wellbeing.webp" alt="Student feeling stressed while studying" loading="lazy">
+                    <figcaption>
+                        <h3>Wellbeing &amp; Balance 🥱</h3>
+                        <p>
+                            When students care for their wellbeing, they think more clearly,
+                            manage stress better, and perform more effectively in daily life.
+                        </p>
+                    </figcaption>
+                </figure>
+            </article>
+        
+        </section>
+    
+        <section class="feedback">
+            <h2>Share Your Thoughts About the Resources</h2>
+            <form action="https://formspree.io/f/xojnwzor" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" name="email" required>
+        
+                <label for="message">Message:</label>
+                <textarea name="message" placeholder="Your Message"></textarea>
+        
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p> &copy; 2026 Student Life Resource Toolkit</p>
+        <p>Happiness Isaac &bull; Dynamic Web Fundamentals &bull; Final Project</p>
+    </footer>
+</body>
+
+</html>
