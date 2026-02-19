@@ -25,41 +25,51 @@
         <h1>Student Life Resource Toolkit</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="study-tips.html">Study Tips</a>
+            <a href="resources.html" aria-current="page">Study Tips</a>
             <a href="resources.html">Resources</a>
         </nav>
     </header>
-    <main>
-        <div class="study-tips">
-            <h2>Effective Study Strategies</h2>
-            <ul>
-                <li>💡 Create a dedicated study space</li>
-                <li>⏳ Use the Pomodoro technique (25 min study, 5 min break)</li>
-                <li>📖 Take handwritten notes to improve memory retention</li>
-                <li>🎧 Listen to study-friendly music</li>
-            </ul>
-        </div>
-        <section id="featured-tips">
-            <h2>🌟 Featured Study Tips</h2>
+
+    <main class="case">
+        <section class="strategies">
+            <h2>📚 Master Your Study Strategy</h2>
+            <p>
+                Effective studying is not about working harder —
+                it's about working smarter with proven techniques.
+            </p>
         </section>
-        <section class="study-group">
-            <h2>Join Our Study Group</h2>
-            <form id="myForm" aria-describedby="form-description">
-                <p id="form-description">Please fill out the form below. All fields are required.</p>
-
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required aria-required="true">
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required aria-required="true">
-
-                <button type="submit">Join Group</button>
-            </form>
+    
+        <section class="essentials">
+            <h2>🧠 Study Process Essentials</h2>
+            <div class="essentials-grid">
+                <article class="essentials-card">
+                    <h3>Engage Actively</h3>
+                    <p>Attend class, complete assignments, and question your understanding of each concept.</p>
+                </article>
+    
+                <article class="essentials-card">
+                    <h3>Plan Ahead</h3>
+                    <p>Create study schedules and break big projects into manageable steps.</p>
+                </article>
+    
+                <article class="essentials-card">
+                    <h3>Self-Test Regularly</h3>
+                    <p>Use flashcards, practice exams, or concept sheets to strengthen memory.</p>
+                </article>
+    
+                <article class="essentials-card">
+                    <h3>Teach to Learn</h3>
+                    <p>Explaining ideas to others reinforces deep understanding.</p>
+                </article>
+            </div>
         </section>
-        <div id="success-message" role="status" aria-live="polite">
-            Thank you! Your form has been submitted.
-        </div>
+    
+        <section class="featured-section">
+            <h2>🌟 Featured Techniques</h2>
+            <div id="featured-tips" class="featured-grid"></div>
+        </section>
     </main>
+
     <footer>
         <p> &copy; 2026 Student Life Resource Toolkit</p>
         <p>Happiness Isaac &bull; Dynamic Web Fundamentals &bull; Final Project</p>

@@ -92,8 +92,7 @@ nav a:hover {
 
 .welcome-msg p {
     padding-bottom: 20px;
-    font-style: italic;
-    font-family: cursive;
+    font-family: cursive; 
 }
 
 .welcome-msg button {
@@ -111,27 +110,27 @@ nav a:hover {
     cursor: pointer;
 }
 
-.student-success {
+.student-story {
     text-align: center;
     margin: 1rem auto;
 }
 
-.student-success h2 {
+.student-story h2 {
     padding-bottom: 15px;
     font-size: 2rem;
     font-family: var(--header-font);
 }
 
-.student-success h2::before {
+.student-story h2::before {
     content: "🎓 ";
 }
 
-.student-success p {
+.student-story p {
     font-size: 1.3rem;
     padding-bottom: 20px;
 }
  
-body.dark-mode .student-success {
+body.dark-mode .student-story {
     color: var(--text-color);
 }
 
@@ -182,30 +181,42 @@ body.dark-mode .student-success {
     margin-bottom: 1rem;
     font-size: 2rem;
     text-align: center;
+    font-family: var(--header-font);
 }
 
 .feedback form {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
 }
 
 .feedback label {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .feedback input,
 .feedback textarea {
-    padding: 10px;
-    border-radius: 5px;
+    padding: 12px;
+    border-radius: 8px;
     border: 1px solid var(--border-color);
+    font-size: 1rem;
+    width: 100%;
 }
 
 .feedback button {
     margin-top: 15px;
     border-radius: 30px;
     background-color: var(--background-color);
+    border: none;
+    padding: 12px;
     cursor: pointer;
     font-weight: bold;
+}
+
+.feedback button:hover {
+    transform: scale(1.03);
+    background-color: var(--heading-color);
+    color: var(--text-color);
 }
 
 textarea[name="message"] {
@@ -219,7 +230,7 @@ body.dark-mode .feedback {
     color: var(--text-color);
 }
 
-body.dark-mode .feedback label{
+body.dark-mode .feedback label {
     color: var(--text-color);
 }
 
@@ -230,206 +241,154 @@ footer {
     padding: 20px;
 }
 
-
-/* Study Tips */
-
-.study-tips h2,
-#featured-tips h2 {
-    font-family: var(--main-font);
-    padding: 10px 0;
-    font-size: 1.8rem;
-}
-
-.study-tips {
-    padding: 20px;
-    background-color: ;
-}
-
-.study-tips li {
-    padding: 6px 0;
-    font-family: var(--primary-font);
-    list-style-type: none;
-    font-size: 1.2rem;
-}
-
-.study-tips a {
-    font-size: 1rem;
-    color: ;
-}
-
-#featured-tips {
-    padding: 20px;
-}
-
-.tip-card h3 {
-    font-family: var(--primary-font);
-    color: ;
-}
-
-body.dark-mode .tip-card h3 {
-    color: ;
-}
-
-body.dark-mode .study-tips {
-    color: ;
-}
-
-body.dark-mode .study-tips a {
-    color: ;
-}
-
-.tip-card {
-    margin: 10px;
-}
-
-.tip-card p {
-    font-family: var(--secondary-font);
-}
-
-.study-group {
-    padding: 20px;
-    background-color: rgb(177, 174, 174);
-}
-
-.study-group h2 {
-    font-family: var(--main-font);
-    padding: 10px 0;
-    font-size: 1.8rem;
+.strategies {
     text-align: center;
-    padding-bottom: 20px;
+    padding: 3rem 1rem;
 }
 
-body.dark-mode .study-group h2 {
-    color: ;
+.strategies h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: var(--header-font);
 }
 
-form {
-    font-family: var(--secondary-font);
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    text-align: center;
-    padding-top: 20px;
-    font-size: 1.2rem;
-}
-
-#form-description {
-    text-align: center;
-}
-
-input {
-    padding: 20px;
-    width: 24rem;
+.strategies p {
+    max-width: 600px;
     margin: 0 auto;
     font-size: 1.2rem;
 }
 
-input[type="email"] {
-    margin-bottom: 20px;
+.essentials {
+    padding: 2rem 0;
 }
 
-form button {
-    width: 20rem;
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 15px 300px;
-    border: none;
-    font-family: var(--main-font);
-    font-size: 1.2rem;
+.essentials h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: var(--header-font);
 }
 
-body.dark-mode form {
-    color: #000;
+.essentials-grid {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr;
 }
 
-form button:hover {
-    background-color: var(--heading-color);
-    color: var(--text-color);
-    cursor: pointer;
-    transform: scaleX(1);
+.essentials-card {
+    background: var(--text-color);
+    padding: 1.8rem;
+    border-radius: 30px;
+    box-shadow: 2px 4px 8px var(--accent-color1);
+    transition: all 0.3s ease;
 }
 
-#success-message {
-    color: ;
-    margin-top: 20px;
-    display: none;
-    font-family: var(--secondary-font);
-    padding: 10px;
+.essentials-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 2px 4px 8px var(--accent-color1);
 }
 
-/* resources.html page */
+.essentials h3 {
+    margin-bottom: 1rem;
+    font-family: var(--header-font);
+}
+
+.featured-section {
+    padding: 3rem 0;
+}
+
+.featured-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: var(--header-font);
+}
+
+.featured-grid {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr;
+}
+
+body.dark-mode .strategies,
+body.dark-mode .featured-section h2,
+body.dark-mode .essentials h2 {
+   color: var(--text-color);
+}
+
+
+
+.resources-container {
+    margin: 3rem auto;
+}
 
 #study-materials,
-#student-wellness {
-    padding: 20px;
-    border: 1px dotted ;
-    margin: 10px;
-}
-
-#study-materials h2,
-#campus-resources h2,
-#student-wellness h2,
-#financial-resources h2 {
-    font-family: var(--main-font);
-    padding: 10px 0;
-    font-size: 1.8rem;
-    color: ;
-}
-
-#study-materials p,
-#campus-resources p,
-#student-wellness p,
-#financial-resources p {
-    font-family: ;
-    font-size: 1.2rem;
-    padding: 0 0 10px;
-}
-
-#study-materials li,
-#campus-resources li,
-#student-wellness li,
-#financial-resources li {
-    list-style-position: inside;
-    font-family: var(--primary-font);
-    padding: 5px;
-}
-
-#study-materials a,
-#student-wellness a {
-    text-decoration: none;
-}
-
 #campus-resources,
+#student-wellness,
 #financial-resources {
-    padding: 20px;
-    border: 1px dotted ;
-    margin: 10px;
-    background-color: ;
-    color: ;
-    border-radius: 5px;
+    background: var(--text-color);
+    padding: 2.5rem;
+    border-radius: 20px;
+    margin-bottom: 2.5rem;
+    box-shadow: 2px 4px 8px var(--accent-color1);
+    transition: 0.3s ease;
 }
 
-#campus-resources h2,
-#financial-resources h2 {
-    color: ;
+#study-materials:hover,
+#campus-resources:hover,
+#student-wellness:hover,
+#financial-resources:hover {
+    transform: translateY(-6px);
 }
 
-#campus-resources a,
-#financial-resources a {
+.resources-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 10px;
+    font-family: var(--header-font);
+}
+
+.resources-container h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: var(--heading-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+.resources-container p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.resources-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resources-container li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.resources-container li:last-child {
+    border-bottom: none;
+}
+
+.resources-container a {
     text-decoration: none;
-    color: ;
-    font-size: 1.2rem;
-    transform-origin: center;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.resources-container a:hover {
+    padding-left: 10px;
 }
 
 
 @media screen and (min-width: 700px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
     nav {
         display: flex;
         flex-direction: row;
@@ -448,10 +407,6 @@ form button:hover {
         padding: 60px;
     }
 
-    .welcome-msg h2 {
-        font-size: 2rem;
-    }
-
     .welcome-msg p {
         font-size: 1.2rem;
     }
@@ -465,20 +420,37 @@ form button:hover {
         grid-template-columns: repeat(3, 1fr);
     }
     
-    .student-success {
-        padding: 2rem;
-    }
-    
-    .student-success h2 {
-        font-size: 1.6rem;
-    }
-
    main,
    header,
    footer {
        width: min(1300px, 90%);
        margin: 0 auto;
 
+   }
+
+   .essentials-grid {
+       grid-template-columns: repeat(2, 1fr);
+   }
+
+   .featured-grid {
+       grid-template-columns: repeat(3, 1fr);
+   }
+
+   .essentials-grid {
+       grid-template-columns: 1fr 1fr;
+   }
+
+   .resources-container {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       gap: 2rem;
+   }
+
+   #study-materials,
+   #campus-resources,
+   #student-wellness,
+   #financial-resources {
+       margin-bottom: 0;
    }
 
 }
