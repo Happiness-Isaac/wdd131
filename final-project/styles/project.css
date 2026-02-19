@@ -1,9 +1,12 @@
+/* ========================
+   VARIABLES
+======================== */
 :root {
     --heading-color: #052659;
     --background-color: #dceefa;
     --accent-color1: #5482b4;
     --accent-color2: #011025;
-    --light-color: #00000062;
+    --light-color: rgba(0, 0, 0, 0.38);
     --header-font: "Lato", sans-serif;
     --body-font: "Open Sans", sans-serif;
     --text-color: #fff;
@@ -17,13 +20,25 @@
     box-sizing: border-box;
 }
 
-body.dark-mode {
-    background-color: var(--darkmode-color);
-}
-
 body {
     font-family: var(--body-font);
     background-color: var(--background-color);
+   
+}
+
+body.dark-mode {
+    background-color: var(--darkmode-color);
+    color: var(--text-color);
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 header h1 {
@@ -38,10 +53,11 @@ header h1 {
 nav {
     background-color: var(--accent-color2);
     display: flex;
+    flex-direction: column;
     align-items: center;
     padding: 10px;
-    flex-direction: column;
     color: var(--text-color);
+    gap: 5px;
 }
 
 nav a {
@@ -49,76 +65,72 @@ nav a {
     text-decoration: none;
     font-size: 1.2rem;
     color: var(--text-color);
-    padding: 15px;
-    transform-origin: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 nav a:hover {
     background-color: var(--accent-color1);
     border-radius: 30px;
-    cursor: pointer;
     transform: scale(1.1);
+    cursor: pointer;
 }
 
-.welcome{
+.welcome {
     position: relative;
 }
 
 .welcome img {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 5px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
 .welcome-msg {
     position: relative;
-    bottom: 15rem;
     text-align: center;
     background-color: var(--light-color);
     color: var(--text-color);
-    padding: 20px;
+    padding: 2rem 1rem;
+    margin-top: -5rem;
+    border-radius: 10px;
 }
 
 .welcome-msg h2 {
-    padding-bottom: 10px;
     font-family: var(--header-font);
     font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .welcome-msg p {
-    padding-bottom: 20px;
-    font-family: cursive; 
+    font-family: cursive;
+    margin-bottom: 1.5rem;
 }
 
 .welcome-msg button {
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 10px;
     border: none;
-    font-family: var(--body-font);
-    box-shadow: 5px 5px 15px;
+    background-color: var(--accent-color1);
+    color: var(--text-color);
+    font-weight: bold;
+    transition: 0.3s ease;
 }
 
 .welcome-msg button:hover {
     background-color: var(--accent-color2);
-    transition: 0.6s;
-    color: var(--text-color);
     cursor: pointer;
 }
 
 .student-story {
     text-align: center;
-    margin: 1rem auto;
+    margin: 2rem auto;
 }
 
 .student-story h2 {
-    padding-bottom: 15px;
-    font-size: 2rem;
     font-family: var(--header-font);
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .student-story h2::before {
@@ -127,49 +139,37 @@ nav a:hover {
 
 .student-story p {
     font-size: 1.3rem;
-    padding-bottom: 20px;
-}
- 
-body.dark-mode .student-story {
-    color: var(--text-color);
+    line-height: 1.6;
 }
 
 .tip-descriptions {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 2.5rem;
 }
 
 .tip-card {
+    background: var(--text-color);
     border-radius: 30px;
     overflow: hidden;
     box-shadow: 2px 4px 8px var(--accent-color1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: var(--text-color);
     display: flex;
     flex-direction: column;
 }
 
 .tip-card:hover {
     transform: translateY(-10px);
-    box-shadow: 2px 4px 8px var(--accent-color1);
-}
-
-.tip-card img {
-    width: 100%;
-    height: auto ;
-    object-fit: cover;
+    box-shadow: 2px 6px 12px var(--accent-color1);
 }
 
 .tip-card h3 {
-    padding: 15px;
-    margin: 5px;
     font-family: var(--header-font);
+    padding: 15px;
 }
 
 .tip-card p {
-    padding: 0 20px 15px;
-    margin: 0;
+    padding: 0 15px 15px;
 }
 
 .feedback {
@@ -178,10 +178,10 @@ body.dark-mode .student-story {
 }
 
 .feedback h2 {
-    margin-bottom: 1rem;
+    font-family: var(--header-font);
     font-size: 2rem;
     text-align: center;
-    font-family: var(--header-font);
+    margin-bottom: 1rem;
 }
 
 .feedback form {
@@ -201,16 +201,17 @@ body.dark-mode .student-story {
     border: 1px solid var(--border-color);
     font-size: 1rem;
     width: 100%;
+    resize: vertical;
 }
 
 .feedback button {
-    margin-top: 15px;
     border-radius: 30px;
-    background-color: var(--background-color);
-    border: none;
     padding: 12px;
-    cursor: pointer;
+    border: none;
     font-weight: bold;
+    background-color: var(--background-color);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 .feedback button:hover {
@@ -219,132 +220,52 @@ body.dark-mode .student-story {
     color: var(--text-color);
 }
 
-textarea[name="message"] {
-    resize: both;
-    max-width: 100%;
-    max-height: 200px;
-    box-sizing: border-box;
-}
-
-body.dark-mode .feedback {
-    color: var(--text-color);
-}
-
-body.dark-mode .feedback label {
-    color: var(--text-color);
-}
-
-footer {
-    background-color: var(--heading-color);
-    color: var(--text-color);
+.strategies,
+.featured-section,
+.essentials {
     text-align: center;
-    padding: 20px;
+    padding: 2rem 1rem;
 }
 
-.strategies {
-    text-align: center;
-    padding: 3rem 1rem;
-}
-
-.strategies h2 {
+.strategies h2,
+.featured-section h2,
+.essentials h2 {
+    font-family: var(--header-font);
     font-size: 2rem;
     margin-bottom: 1rem;
-    font-family: var(--header-font);
 }
 
-.strategies p {
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 1.2rem;
-}
-
-.essentials {
-    padding: 2rem 0;
-}
-
-.essentials h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-family: var(--header-font);
-}
-
-.essentials-grid {
+.essentials-grid,
+.featured-grid {
     display: grid;
-    gap: 4rem;
+    gap: 2rem;
     grid-template-columns: 1fr;
 }
 
 .essentials-card {
     background: var(--text-color);
-    padding: 1.8rem;
+    padding: 1.5rem;
     border-radius: 30px;
     box-shadow: 2px 4px 8px var(--accent-color1);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .essentials-card:hover {
     transform: translateY(-8px);
-    box-shadow: 2px 4px 8px var(--accent-color1);
 }
-
-.essentials h3 {
-    margin-bottom: 1rem;
-    font-family: var(--header-font);
-}
-
-.featured-section {
-    padding: 3rem 0;
-}
-
-.featured-section h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-family: var(--header-font);
-}
-
-.featured-grid {
-    display: grid;
-    gap: 4rem;
-    grid-template-columns: 1fr;
-}
-
-body.dark-mode .strategies,
-body.dark-mode .featured-section h2,
-body.dark-mode .essentials h2 {
-   color: var(--text-color);
-}
-
-
 
 .resources-container {
     margin: 3rem auto;
-}
-
-#study-materials,
-#campus-resources,
-#student-wellness,
-#financial-resources {
-    background: var(--text-color);
-    padding: 2.5rem;
-    border-radius: 20px;
-    margin-bottom: 2.5rem;
-    box-shadow: 2px 4px 8px var(--accent-color1);
-    transition: 0.3s ease;
-}
-
-#study-materials:hover,
-#campus-resources:hover,
-#student-wellness:hover,
-#financial-resources:hover {
-    transform: translateY(-6px);
+    display: grid;
+    gap: 2rem;
 }
 
 .resources-container h2 {
+    font-family: var(--header-font);
     font-size: 2rem;
     margin-bottom: 1rem;
     position: relative;
     padding-bottom: 10px;
-    font-family: var(--header-font);
 }
 
 .resources-container h2::after {
@@ -359,8 +280,8 @@ body.dark-mode .essentials h2 {
 }
 
 .resources-container p {
-    margin-bottom: 1.5rem;
     line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 .resources-container ul {
@@ -387,70 +308,61 @@ body.dark-mode .essentials h2 {
     padding-left: 10px;
 }
 
+footer {
+    background-color: var(--heading-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+}
+
+body.dark-mode {
+    --text-color: #fff;
+}
+
+body.dark-mode header h1,
+body.dark-mode nav,
+body.dark-mode footer,
+body.dark-mode .tip-card,
+body.dark-mode .essentials-card,
+body.dark-mode .resources-container div,
+body.dark-mode .welcome-msg {
+    color: var(--text-color);
+    background-color: var(--accent-color2);
+}
 
 @media screen and (min-width: 700px) {
+
     nav {
-        display: flex;
         flex-direction: row;
         justify-content: space-around;
-        padding: 5px;
-    }
-
-    nav a {
-        display: block;
-        padding: 10px;
-        font-size: 1.2rem;
+        padding: 5px 0;
     }
 
     .welcome-msg {
-        bottom: 30rem;
-        padding: 60px;
-    }
-
-    .welcome-msg p {
-        font-size: 1.2rem;
-    }
-
-    .welcome-msg button {
-        padding: 20px;
-        font-size: 1rem;
+        margin-top: -10rem;
+        padding: 4rem 2rem;
     }
 
     .tip-descriptions {
         grid-template-columns: repeat(3, 1fr);
     }
-    
-   main,
-   header,
-   footer {
-       width: min(1300px, 90%);
-       margin: 0 auto;
 
-   }
+    .essentials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-   .essentials-grid {
-       grid-template-columns: repeat(2, 1fr);
-   }
+    .featured-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-   .featured-grid {
-       grid-template-columns: repeat(3, 1fr);
-   }
+    .resources-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-   .essentials-grid {
-       grid-template-columns: 1fr 1fr;
-   }
-
-   .resources-container {
-       display: grid;
-       grid-template-columns: repeat(2, 1fr);
-       gap: 2rem;
-   }
-
-   #study-materials,
-   #campus-resources,
-   #student-wellness,
-   #financial-resources {
-       margin-bottom: 0;
-   }
-
+    main,
+    header,
+    footer {
+        width: min(1300px, 90%);
+        margin: 0 auto;
+    }
 }
